@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="TestCases.VerifyLoginPage">
+        <methods>
+          <include name="maxi"/>
+          <include name="openurl"/>
+          <include name="login"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- TestCases.VerifyLoginPage -->
+      <class name="TestCases.VerifySignupPage">
+        <methods>
+          <include name="maxi"/>
+          <include name="openurl"/>
+          <include name="signup"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- TestCases.VerifySignupPage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
