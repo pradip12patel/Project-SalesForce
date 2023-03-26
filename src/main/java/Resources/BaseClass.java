@@ -7,6 +7,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -32,7 +33,11 @@ public class BaseClass {
 		
 		if(key.equalsIgnoreCase("chrome"))  {
 			
-			 driver=new ChromeDriver();
+			 ChromeOptions op=new ChromeOptions();
+		      op.addArguments("--remote-allow-origins=*"); 
+	    	  
+	    	 driver=new ChromeDriver(op); 
+			
 		}
 		else if(key.equalsIgnoreCase("firefox"))  {
 			
